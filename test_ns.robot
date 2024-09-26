@@ -7,9 +7,14 @@ ${VERTREK}    Amsterdam Centraal
 ${BESTEMMING} Utrecht Centraal
 
 *** Keywords ***
+Wait Until Element Is Visible
+    [Arguments]    ${id}    ${10s}
+    
+
 Open NS Website En Wacht Op Laadscherm
+    New Browser    headless=false
     New Page    ${NS_URL}
-    Wait Until Element Is Visible    id=location-input-FROM-POSITIONED    10s
+    Sleep    5s
 
 Voer Reisinformatie In
     Input Text    id=location-input-FROM-POSITIONED    ${VERTREK}

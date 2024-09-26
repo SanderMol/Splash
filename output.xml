@@ -1,33 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.12.6 on win32)" generated="2024-09-26T22:57:11.873752" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1 (Python 3.12.6 on win32)" generated="2024-09-26T23:23:00.764661" rpa="false" schemaversion="5">
 <suite id="s1" name="Test Ns" source="c:\Users\sande\Documents\Code\Splash\Splash\test_ns.robot">
-<test id="s1-t1" name="Plan Een Reis Op NS Website" line="22">
+<test id="s1-t1" name="Plan Een Reis Op NS Website" line="27">
 <kw name="Open NS Website En Wacht Op Laadscherm">
-<kw name="New Page">
-<msg time="2024-09-26T22:57:12.049328" level="FAIL">No keyword with name 'New Page' found.</msg>
+<kw name="New Browser" owner="Browser">
+<msg time="2024-09-26T23:23:01.756713" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\sande\\Documents\\Code\\Splash\\Splash\\browser\\traces\\c6c72bb4-b3a3-4d36-9394-8155682fd3a7"}</msg>
+<msg time="2024-09-26T23:23:02.204463" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\sande\\Documents\\Code\\Splash\\Splash\\browser\\traces\\c6c72bb4-b3a3-4d36-9394-8155682fd3a7"}</msg>
+<arg>headless=false</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2024-09-26T23:23:01.755701" elapsed="0.449761"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2024-09-26T23:23:05.962492" level="INFO">Successfully initialized new page object and opened url: https://www.ns.nl</msg>
+<msg time="2024-09-26T23:23:05.962492" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
 <arg>${NS_URL}</arg>
-<status status="FAIL" start="2024-09-26T22:57:12.049328" elapsed="0.002521">No keyword with name 'New Page' found.</status>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2024-09-26T23:23:02.205462" elapsed="3.757030"/>
 </kw>
-<kw name="Wait Until Element Is Visible">
-<arg>id=location-input-FROM-POSITIONED</arg>
-<arg>10s</arg>
-<status status="NOT RUN" start="2024-09-26T22:57:12.051849" elapsed="0.000000"/>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-26T23:23:10.963824" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-26T23:23:05.963491" elapsed="5.000333"/>
 </kw>
-<status status="FAIL" start="2024-09-26T22:57:12.048210" elapsed="0.003639">No keyword with name 'New Page' found.</status>
+<status status="PASS" start="2024-09-26T23:23:01.754704" elapsed="9.210130"/>
 </kw>
 <kw name="Voer Reisinformatie In">
-<status status="NOT RUN" start="2024-09-26T22:57:12.053344" elapsed="0.000000"/>
+<kw name="Input Text">
+<msg time="2024-09-26T23:23:10.967834" level="FAIL">No keyword with name 'Input Text' found.</msg>
+<arg>id=location-input-FROM-POSITIONED</arg>
+<arg>${VERTREK}</arg>
+<status status="FAIL" start="2024-09-26T23:23:10.967834" elapsed="0.001001">No keyword with name 'Input Text' found.</status>
+</kw>
+<kw name="Input Text">
+<arg>id=location-input-TO-POSITIONED</arg>
+<arg>${BESTEMMING}</arg>
+<status status="NOT RUN" start="2024-09-26T23:23:10.968835" elapsed="0.001330"/>
+</kw>
+<status status="FAIL" start="2024-09-26T23:23:10.965837" elapsed="0.004328">No keyword with name 'Input Text' found.</status>
 </kw>
 <kw name="Klik op Plan Reis">
-<status status="NOT RUN" start="2024-09-26T22:57:12.054423" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-09-26T23:23:10.970165" elapsed="0.000000"/>
 </kw>
-<kw name="Close Browser">
-<status status="NOT RUN" start="2024-09-26T22:57:12.054423" elapsed="0.000000"/>
+<kw name="Close Browser" owner="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2024-09-26T23:23:10.971519" elapsed="0.000000"/>
 </kw>
 <doc>Test het invoeren van een vertrek- en bestemmingsadres en klik op plannen.</doc>
-<status status="FAIL" start="2024-09-26T22:57:12.046214" elapsed="0.009557">No keyword with name 'New Page' found.</status>
+<status status="FAIL" start="2024-09-26T23:23:01.748597" elapsed="9.222922">No keyword with name 'Input Text' found.</status>
 </test>
-<status status="FAIL" start="2024-09-26T22:57:11.879751" elapsed="0.178275"/>
+<status status="FAIL" start="2024-09-26T23:23:00.771347" elapsed="10.348164"/>
 </suite>
 <statistics>
 <total>
@@ -40,31 +68,6 @@
 </suite>
 </statistics>
 <errors>
-<msg time="2024-09-26T22:57:11.879751" level="ERROR">Error in file 'c:\Users\sande\Documents\Code\Splash\Splash\test_ns.robot' on line 7: Setting variable '${BESTEMMING} Utrecht Centraal' failed: Invalid variable name '${BESTEMMING} Utrecht Centraal'.</msg>
-<msg time="2024-09-26T22:57:12.033698" level="ERROR">Error in file 'c:\Users\sande\Documents\Code\Splash\Splash\test_ns.robot' on line 2: Initializing library 'Browser' with no arguments failed: Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [WinError 2] Het systeem kan het opgegeven bestand niet vinden
-Traceback (most recent call last):
-  File "C:\Users\sande\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\playwright.py", line 69, in ensure_node_dependencies
-    run(["node", "-v"], stdout=DEVNULL, check=True)
-  File "C:\Users\sande\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 548, in run
-    with Popen(*popenargs, **kwargs) as process:
-         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\sande\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 1026, in __init__
-    self._execute_child(args, executable, preexec_fn, close_fds,
-  File "C:\Users\sande\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 1538, in _execute_child
-    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
-                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-FileNotFoundError: [WinError 2] Het systeem kan het opgegeven bestand niet vinden
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "C:\Users\sande\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\browser.py", line 875, in __init__
-    self.playwright = Playwright(
-                      ^^^^^^^^^^^
-  File "C:\Users\sande\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\playwright.py", line 53, in __init__
-    self.ensure_node_dependencies()
-  File "C:\Users\sande\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\playwright.py", line 71, in ensure_node_dependencies
-    raise RuntimeError(
-RuntimeError: Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [WinError 2] Het systeem kan het opgegeven bestand niet vinden</msg>
+<msg time="2024-09-26T23:23:00.771347" level="ERROR">Error in file 'c:\Users\sande\Documents\Code\Splash\Splash\test_ns.robot' on line 7: Setting variable '${BESTEMMING} Utrecht Centraal' failed: Invalid variable name '${BESTEMMING} Utrecht Centraal'.</msg>
 </errors>
 </robot>
