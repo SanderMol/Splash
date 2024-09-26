@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.6 on win32)" generated="2024-09-26T22:10:27.271942" rpa="false" schemaversion="5">
+<suite id="s1" name="Start" source="c:\Users\sande\Documents\Code\Splash\Splash\start.robot">
+<test id="s1-t1" name="Simpele Test" line="5">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-26T22:10:27.308720" level="INFO">Hallo, wereld!</msg>
+<arg>Hallo, wereld!</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-26T22:10:27.308720" elapsed="0.004735"/>
+</kw>
+<status status="PASS" start="2024-09-26T22:10:27.307719" elapsed="0.006733"/>
+</test>
+<doc>Een eenvoudige Robot Framework test.</doc>
+<status status="PASS" start="2024-09-26T22:10:27.287136" elapsed="0.028317"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Start">Start</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
