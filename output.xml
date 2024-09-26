@@ -1,28 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.12.6 on win32)" generated="2024-09-26T22:10:27.271942" rpa="false" schemaversion="5">
-<suite id="s1" name="Start" source="c:\Users\sande\Documents\Code\Splash\Splash\start.robot">
-<test id="s1-t1" name="Simpele Test" line="5">
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-09-26T22:10:27.308720" level="INFO">Hallo, wereld!</msg>
-<arg>Hallo, wereld!</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-09-26T22:10:27.308720" elapsed="0.004735"/>
+<robot generator="Robot 7.1 (Python 3.12.6 on win32)" generated="2024-09-26T22:57:11.873752" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Ns" source="c:\Users\sande\Documents\Code\Splash\Splash\test_ns.robot">
+<test id="s1-t1" name="Plan Een Reis Op NS Website" line="22">
+<kw name="Open NS Website En Wacht Op Laadscherm">
+<kw name="New Page">
+<msg time="2024-09-26T22:57:12.049328" level="FAIL">No keyword with name 'New Page' found.</msg>
+<arg>${NS_URL}</arg>
+<status status="FAIL" start="2024-09-26T22:57:12.049328" elapsed="0.002521">No keyword with name 'New Page' found.</status>
 </kw>
-<status status="PASS" start="2024-09-26T22:10:27.307719" elapsed="0.006733"/>
+<kw name="Wait Until Element Is Visible">
+<arg>id=location-input-FROM-POSITIONED</arg>
+<arg>10s</arg>
+<status status="NOT RUN" start="2024-09-26T22:57:12.051849" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-09-26T22:57:12.048210" elapsed="0.003639">No keyword with name 'New Page' found.</status>
+</kw>
+<kw name="Voer Reisinformatie In">
+<status status="NOT RUN" start="2024-09-26T22:57:12.053344" elapsed="0.000000"/>
+</kw>
+<kw name="Klik op Plan Reis">
+<status status="NOT RUN" start="2024-09-26T22:57:12.054423" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser">
+<status status="NOT RUN" start="2024-09-26T22:57:12.054423" elapsed="0.000000"/>
+</kw>
+<doc>Test het invoeren van een vertrek- en bestemmingsadres en klik op plannen.</doc>
+<status status="FAIL" start="2024-09-26T22:57:12.046214" elapsed="0.009557">No keyword with name 'New Page' found.</status>
 </test>
-<doc>Een eenvoudige Robot Framework test.</doc>
-<status status="PASS" start="2024-09-26T22:10:27.287136" elapsed="0.028317"/>
+<status status="FAIL" start="2024-09-26T22:57:11.879751" elapsed="0.178275"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Start">Start</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="Test Ns">Test Ns</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2024-09-26T22:57:11.879751" level="ERROR">Error in file 'c:\Users\sande\Documents\Code\Splash\Splash\test_ns.robot' on line 7: Setting variable '${BESTEMMING} Utrecht Centraal' failed: Invalid variable name '${BESTEMMING} Utrecht Centraal'.</msg>
+<msg time="2024-09-26T22:57:12.033698" level="ERROR">Error in file 'c:\Users\sande\Documents\Code\Splash\Splash\test_ns.robot' on line 2: Initializing library 'Browser' with no arguments failed: Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [WinError 2] Het systeem kan het opgegeven bestand niet vinden
+Traceback (most recent call last):
+  File "C:\Users\sande\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\playwright.py", line 69, in ensure_node_dependencies
+    run(["node", "-v"], stdout=DEVNULL, check=True)
+  File "C:\Users\sande\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 548, in run
+    with Popen(*popenargs, **kwargs) as process:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\sande\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 1026, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Users\sande\AppData\Local\Programs\Python\Python312\Lib\subprocess.py", line 1538, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] Het systeem kan het opgegeven bestand niet vinden
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\sande\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\browser.py", line 875, in __init__
+    self.playwright = Playwright(
+                      ^^^^^^^^^^^
+  File "C:\Users\sande\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\playwright.py", line 53, in __init__
+    self.ensure_node_dependencies()
+  File "C:\Users\sande\AppData\Local\Programs\Python\Python312\Lib\site-packages\Browser\playwright.py", line 71, in ensure_node_dependencies
+    raise RuntimeError(
+RuntimeError: Couldn't execute node. Please ensure you have node.js installed and in PATH. See https://nodejs.org/ for instructions. Original error is [WinError 2] Het systeem kan het opgegeven bestand niet vinden</msg>
 </errors>
 </robot>
